@@ -8,7 +8,7 @@ from functools import lru_cache
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--gpu", type=str, default=None)
+    parser.add_argument("--gpu", type=str, default=0)
     parser.add_argument("--dir_data", type=str, default='../data/devdata/')
     parser.add_argument("--exp_prefix", type=str, default='', help='additional exp name')
     parser.add_argument("--model_prefix", type=str, default='', help='additional model name')
