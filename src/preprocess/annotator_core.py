@@ -87,7 +87,10 @@ class CoreAnnotator(BaseAnnotator):
             for s in doc['sents']:
                 s['phrases'] = []
             phrase2instances = phrase2instances_list[i_doc]
-            doc2phrases[doc['_id_']] = list(phrase2instances.keys())
+            # doc2phrases[doc['_id_']] = list(phrase2instances.keys())
+            l=list(phrase2instances.keys())
+            for j in range(len(doc['_id_'])):
+              doc2phrases[doc['_id_'][j]] = l[j]
             for phrase, instances in phrase2instances.items():
                 for i_sent, l_idx, r_idx in instances:
                     doc['sents'][i_sent]['phrases'].append([[l_idx, r_idx], phrase])
