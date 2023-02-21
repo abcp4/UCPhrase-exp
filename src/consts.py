@@ -13,7 +13,7 @@ def parse_args():
     parser.add_argument("--exp_prefix", type=str, default='', help='additional exp name')
     parser.add_argument("--model_prefix", type=str, default='', help='additional model name')
     parser.add_argument("--path_model_config", type=str, default='../configs/core.CNN.3layers.json')
-    args = parser.parse_args()
+    args = parser.parse_args(args=[])
     return args
 
 
